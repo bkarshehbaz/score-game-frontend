@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {
   incrementPeriod,
   decrementPeriod,
@@ -19,25 +19,25 @@ import {
   setTeam2,
   resetFouls,
   resetInfo,
-} from '../../features/info/infoSlice';
+} from "../../features/info/infoSlice";
 import {
   updateScore,
   selectHomeScore,
   selectAwayScore,
   resetScores,
   resetAll,
-} from '../../features/scores/scoreSlice';
-import useControl from './useControl';
-import ScoreCard from '../../features/scores/ScoreCard';
-import InfoCard from '../../features/info/InfoCard';
-import Timer from '../../features/timer/Timer';
-import './styles/ScoreBoard.scss';
-import { resetTime, updateInitialTime } from '../../features/timer/timerSlice';
+} from "../../features/scores/scoreSlice";
+import useControl from "./useControl";
+import ScoreCard from "../../features/scores/ScoreCard";
+import InfoCard from "../../features/info/InfoCard";
+import Timer from "../../features/timer/Timer";
+import "./styles/ScoreBoard.scss";
+import { resetTime, updateInitialTime } from "../../features/timer/timerSlice";
 
 export default function FootballControl() {
   const dispatch = useDispatch();
 
-  const scoreboardId = useControl('Football', true);
+  const scoreboardId = useControl("Football", true);
   const period = useSelector(selectPeriod);
 
   const extraTime = useSelector(selectExtraTime);
@@ -55,26 +55,25 @@ export default function FootballControl() {
     const target = event.target;
     const value = target.value;
 
-    if (target.id === 'team1') {
+    if (target.id === "team1") {
       dispatch(setTeam1(value));
-    } else if (target.id === 'team2') {
+    } else if (target.id === "team2") {
       dispatch(setTeam2(value));
     }
-  }
+  };
 
   useEffect(() => {
     dispatch(updateInitialTime(0));
     return () => {
-      dispatch(resetInfo())
-      dispatch(resetAll())
-      dispatch(resetTime())
-    }
-  }, [])
+      dispatch(resetInfo());
+      dispatch(resetAll());
+      dispatch(resetTime());
+    };
+  }, []);
 
   return (
     <div className="scoreboard">
       <div className="scoreboard-container container-sm justify-content-center align-items-center">
-
         <form className="scoreboard-card row g-0 justify-content-center">
           <div className="col-sm-12 col-md-6 card text-center">
             <div className="card-header">
@@ -85,7 +84,8 @@ export default function FootballControl() {
                 value={team1}
                 id="team1"
                 aria-label="Team1"
-                onChange={inputChanged} />
+                onChange={inputChanged}
+              />
             </div>
           </div>
           <div className="col-sm-12 col-md-6 card text-center">
@@ -97,7 +97,8 @@ export default function FootballControl() {
                 value={team2}
                 id="team2"
                 aria-label="Team2"
-                onChange={inputChanged} />
+                onChange={inputChanged}
+              />
             </div>
           </div>
         </form>
@@ -139,7 +140,6 @@ export default function FootballControl() {
             >
               Reset
             </button>
-
           </div>
 
           <div className="row g-0 justify-content-center">
@@ -147,13 +147,13 @@ export default function FootballControl() {
               score={homeScore}
               updateScore={updateScore}
               points={[-1, 1]}
-              player={'home'}
+              player={"home"}
             />
             <ScoreCard
               score={awayScore}
               updateScore={updateScore}
               points={[-1, 1]}
-              player={'away'}
+              player={"away"}
             />
           </div>
         </div>
@@ -178,8 +178,11 @@ export default function FootballControl() {
         </div>
 
         <div className="row g-0 justify-content-center scoreboard-row">
-          <button type="button" className="btn btn-primary btn-lg col-xs-2 col-md-2"
-            onClick={() => window.open(`/share/${scoreboardId}`, '_blank')}>
+          <button
+            type="button"
+            className="btn btn-primary btn-lg col-xs-2 col-md-2"
+            onClick={() => window.open(`/share/${scoreboardId}`, "_blank")}
+          >
             Mostrar tablero
           </button>
           <button
@@ -195,6 +198,6 @@ export default function FootballControl() {
           </button>
         </div>
       </div>
-    </div >
+    </div>
   );
 }

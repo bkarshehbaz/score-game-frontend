@@ -11,7 +11,7 @@ import HockeyShow from "../components/show/HockeyShow";
 import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
 import "./styles/share.scss";
-const api = "http://15.229.78.62:8080";
+const api = "http://15.228.73.80:8080";
 const socket = io(api);
 
 export default function Share() {

@@ -1,5 +1,5 @@
 import axios from "axios";
-const api = "http://15.229.78.62:8080";
+const api = "http://15.228.73.80:8080";
 
 export async function createScoreBoard(data) {
   data.date = new Date();
