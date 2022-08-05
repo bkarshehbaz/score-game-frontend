@@ -1,32 +1,32 @@
-import React from 'react';
-import FootballControl from '../components/control/FootballControl'
-import BasketballControl from '../components/control/BasketballControl';
-import TennisControl from '../components/control/TennisControl';
-import RugbyControl from '../components/control/RugbyControl';
-import HandballControl from '../components/control/HandballControl';
-import VolleyballControl from '../components/control/VolleyballControl';
-import HockeyControl from '../components/control/HockeyControl';
-import { useParams } from 'react-router-dom';
-import './styles/sports.scss';
+import React from "react";
+import FootballControl from "../components/control/FootballControl";
+import BasketballControl from "../components/control/BasketballControl";
+import TennisControl from "../components/control/TennisControl";
+import RugbyControl from "../components/control/RugbyControl";
+import HandballControl from "../components/control/HandballControl";
+import VolleyballControl from "../components/control/VolleyballControl";
+import HockeyControl from "../components/control/HockeyControl";
+import { useParams } from "react-router-dom";
+import "./styles/sports.scss";
 
 export default function Sports() {
   const { sport } = useParams();
 
   const renderSportBoard = () => {
     switch (sport) {
-      case 'Football':
+      case "Football":
         return <FootballControl />;
-      case 'Basketball':
+      case "Basketball":
         return <BasketballControl />;
-      case 'Tennis':
+      case "Tennis":
         return <TennisControl />;
-      case 'Rugby':
+      case "Rugby":
         return <RugbyControl />;
-      case 'Handball':
+      case "Handball":
         return <HandballControl />;
-      case 'Volleyball':
+      case "Volleyball":
         return <VolleyballControl />;
-      case 'Hockey':
+      case "Hockey":
         return <HockeyControl />;
       default:
         return null;
@@ -35,9 +35,7 @@ export default function Sports() {
 
   return (
     <div className="score-container">
-      <div>
-        {renderSportBoard(sport)}
-      </div>
+      <div>{renderSportBoard(sport)}</div>
     </div>
   );
 }
