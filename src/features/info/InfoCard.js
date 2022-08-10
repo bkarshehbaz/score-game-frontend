@@ -14,7 +14,7 @@ export default function InfoCard({
     <div
       className={
         incrementInfo && decrementInfo
-          ? "col-sm-12 col-md-6 card text-center"
+          ? "col-sm-12 col-md-6 card text-center infor-card-inner-wrapper"
           : "col-sm-12 col-md-6 bg-transparent card text-center"
       }
     >

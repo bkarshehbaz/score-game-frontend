@@ -54,4 +54,15 @@ form{
 .buttons-wrapper.two{
 flex-direction: column;
 }
+
+
+
+.infor-card-outer-wrapper{
+  flex-wrap: wrap !important;
+  width: 100% !important;
+}
+
+.infor-card-inner-wrapper{
+flex-shrink: unset !important;
+}
 }
