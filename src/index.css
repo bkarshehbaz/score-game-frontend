@@ -11,3 +11,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+/* My css custom one  */
+
+
+.row.justify-content-center{
+
+}
+
+@media only screen and (max-width: 600px) {
+
+.top-bottom-buttons{
+  flex-direction: column;
+}
+
+.two-buttons{
+  flex-direction: column !important;
+    place-content: center !important;
+}
+
+form{
+  width: 150px !important;
+  flex-wrap: inherit !important;
+  margin: 0 auto !important;
+}
+.scoreboard input{
+  text-align: center !important;
+  font-size: 14px !important;
+  width: 100%;
+}
+
+.buttons-wrapper{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.timer-wrapper-parent{
+  flex-direction: inherit;
+}
+
+.buttons-wrapper.two{
+flex-direction: column;
+}
+}
