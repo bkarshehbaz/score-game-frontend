@@ -34,8 +34,8 @@ export default function HockeyShow({
           </div>
 
           <div className="row g-0 justify-content-center two-buttons">
-            <ScoreCard score={homeScore} player={"home"} />
-            <ScoreCard score={awayScore} player={"away"} />
+            <ScoreCard title={team1} score={homeScore} player={"home"} />
+            <ScoreCard title={team2} score={awayScore} player={"away"} />
           </div>
         </div>
 

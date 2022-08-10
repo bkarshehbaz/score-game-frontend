@@ -98,8 +98,16 @@ export default function TennisShow({
                 <h5 className="col-sm-12 col-md-12 text-center">TieBreak</h5>
               </div>
               <div className="row g-0 justify-content-center two-buttons">
-                <ScoreCard score={homeTieBreakScore} player={"home"} />
-                <ScoreCard score={awayTieBreakScore} player={"away"} />
+                <ScoreCard
+                  title={team1}
+                  score={homeTieBreakScore}
+                  player={"home"}
+                />
+                <ScoreCard
+                  title={team2}
+                  score={awayTieBreakScore}
+                  player={"away"}
+                />
               </div>
             </div>
           ) : null}

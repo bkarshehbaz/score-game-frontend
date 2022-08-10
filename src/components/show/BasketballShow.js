@@ -35,8 +35,8 @@ export default function BasketballShow({
             <h5 className="col-sm-12 col-md-12 text-center">Fouls</h5>
           </div>
           <div className="row g-0 justify-content-center">
-            <InfoCard title="Local" info={homeFouls} />
-            <InfoCard title="Visitante" info={awayFouls} />
+            <InfoCard title={team1} info={homeFouls} />
+            <InfoCard title={team2} info={awayFouls} />
           </div>
         </div>
 
@@ -46,8 +46,8 @@ export default function BasketballShow({
           </div>
 
           <div className="row g-0 justify-content-center two-buttons">
-            <ScoreCard score={homeScore} player={"home"} />
-            <ScoreCard score={awayScore} player={"away"} />
+            <ScoreCard title={team1} score={homeScore} player={"home"} />
+            <ScoreCard title={team2} score={awayScore} player={"away"} />
           </div>
         </div>
 

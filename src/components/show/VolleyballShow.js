@@ -102,11 +102,13 @@ export default function VolleyballShow({
                 score={homeScore}
                 tieBreak={isTieBreak}
                 player={"home"}
+                title={team1}
               />
               <ScoreCard
                 score={awayScore}
                 tieBreak={isTieBreak}
                 player={"away"}
+                title={team2}
               />
             </div>
           </div>

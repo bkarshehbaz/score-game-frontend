@@ -37,8 +37,8 @@ export default function HandballShow({
             </h5>
           </div>
           <div className="row g-0 justify-content-center">
-            <InfoCard title="Local" info={homeFouls} />
-            <InfoCard title="Visitante" info={awayFouls} />
+            <InfoCard title={team1} info={homeFouls} />
+            <InfoCard title={team2} info={awayFouls} />
           </div>
         </div>
 
@@ -49,8 +49,8 @@ export default function HandballShow({
             </h5>
           </div>
           <div className="row g-0 justify-content-center two-buttons">
-            <ScoreCard score={homeScore} />
-            <ScoreCard score={awayScore} />
+            <ScoreCard title={team1} score={homeScore} />
+            <ScoreCard title={team2} score={awayScore} />
           </div>
         </div>
 
