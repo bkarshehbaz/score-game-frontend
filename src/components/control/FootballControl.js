@@ -114,15 +114,15 @@ export default function FootballControl() {
               Reset
             </button>
           </div>
-          <div className="row g-0 justify-content-center">
+          <div className="row g-0 justify-content-center infor-card-outer-wrapper">
             <InfoCard
-              title="Local"
+              title={team1}
               info={homeFouls}
               incrementInfo={incrementHomeFouls}
               decrementInfo={decrementHomeFouls}
             />
             <InfoCard
-              title="Visitante"
+              title={team2}
               info={awayFouls}
               incrementInfo={incrementAwayFouls}
               decrementInfo={decrementAwayFouls}
@@ -148,12 +148,14 @@ export default function FootballControl() {
               updateScore={updateScore}
               points={[-1, 1]}
               player={"home"}
+              title={team1}
             />
             <ScoreCard
               score={awayScore}
               updateScore={updateScore}
               points={[-1, 1]}
               player={"away"}
+              title={team2}
             />
           </div>
         </div>

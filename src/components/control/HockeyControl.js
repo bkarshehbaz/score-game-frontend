@@ -106,12 +106,14 @@ export default function HockeyControl() {
               updateScore={updateScore}
               points={[-1, 1]}
               player={"home"}
+              title={team1}
             />
             <ScoreCard
               score={awayScore}
               updateScore={updateScore}
               points={[-1, 1]}
               player={"away"}
+              title={team2}
             />
           </div>
         </div>

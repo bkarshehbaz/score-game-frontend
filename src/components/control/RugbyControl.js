@@ -106,12 +106,14 @@ export default function RugbyControl() {
               updateScore={updateScore}
               points={[-1, 1, 2, 3, 5]}
               player={"home"}
+              title={team1}
             />
             <ScoreCard
               score={awayScore}
               updateScore={updateScore}
               points={[-1, 1, 2, 3, 5]}
               player={"away"}
+              title={team2}
             />
           </div>
         </div>

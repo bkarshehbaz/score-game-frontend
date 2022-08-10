@@ -180,14 +180,14 @@ export default function TennisControl() {
             </div>
             <div className="row g-0 justify-content-center">
               <ScoreCard
-                title="Local"
+                title={team1}
                 score={homeTieBreakScore}
                 updateScore={updateTieBreakScore}
                 points={[-1, 1]}
                 player={"home"}
               />
               <ScoreCard
-                title="Visitante"
+                title={team2}
                 score={awayTieBreakScore}
                 updateScore={updateTieBreakScore}
                 points={[-1, 1]}
@@ -211,14 +211,14 @@ export default function TennisControl() {
             </div>
             <div className="row g-0 justify-content-center">
               <ScoreCard
-                title="Local"
+                title={team1}
                 score={homeSets}
                 updateScore={updateSets}
                 points={[-1, 1]}
                 player={"home"}
               />
               <ScoreCard
-                title="Visitante"
+                title={team2}
                 score={awaySets}
                 updateScore={updateSets}
                 points={[-1, 1]}
@@ -239,14 +239,14 @@ export default function TennisControl() {
             </div>
             <div className="row g-0 justify-content-center">
               <ScoreCard
-                title="Local"
+                title={team1}
                 score={homeGames}
                 updateScore={updateGames}
                 points={[-1, 1]}
                 player={"home"}
               />
               <ScoreCard
-                title="Visitante"
+                title={team2}
                 score={awayGames}
                 updateScore={updateGames}
                 points={[-1, 1]}
