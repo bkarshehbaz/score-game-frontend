@@ -11,7 +11,7 @@ import HockeyShow from "../components/show/HockeyShow";
 import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
 import "./styles/share.scss";
-const api = "https://score-backend.herokuapp.com";
+const api = "https://game-score-backend-1.herokuapp.com";
 const socket = io(api);
 
 export default function Share() {

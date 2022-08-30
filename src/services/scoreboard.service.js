@@ -1,5 +1,5 @@
 import axios from "axios";
-const api = "https://score-backend.herokuapp.com";
+const api = "https://game-score-backend-1.herokuapp.com";
 
 export async function createScoreBoard(data) {
   data.date = new Date();
